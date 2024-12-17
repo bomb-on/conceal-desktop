@@ -320,6 +320,11 @@ jobs:
           git clone https://github.com/ConcealNetwork/conceal-core.git cryptonote
           ./.github/checkout.sh
 
+      - name: checkqt
+        id: checkqt
+        run: |
+          ls -al /usr/local/opt/qt@5/bin
+
       - name: Build
         id: build
         run: |
