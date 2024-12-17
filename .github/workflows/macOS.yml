@@ -14,7 +14,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          brew install boost qt@5
+          brew install boost qt@6
 
       - name: Clone conceal-core
         run: |
@@ -24,7 +24,7 @@ jobs:
       - name: Build
         id: build
         run: |
-          export PATH="/usr/local/opt/qt@5/bin:$PATH"
+          export PATH="/usr/local/opt/qt@6/bin:$PATH"
           build_folder="build/release"
           ccx_version=$(echo ${{ github.ref }} | sed 's|refs/tags/||')
           release_name="ccx-desktop-macOS-v$ccx_version"
